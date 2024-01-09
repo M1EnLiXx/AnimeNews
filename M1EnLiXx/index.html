@@ -1,0 +1,216 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #ff0000;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff0000;
+            text-align: center;
+            margin-bottom: 250px;
+        }
+
+
+        h2,
+        h3,
+        h4 {
+            margin-top: 50px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .news {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .news-item {
+            width: 20%;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            padding: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-item img {
+            width: 100%;
+            height: 290px;
+        }
+
+        .news-item h3 {
+            color: #0000ff;
+            margin-top: 10px;
+        }
+
+        .news-item p {
+            color: #333333;
+            margin-top: 5px;
+        }
+
+        .news-item a {
+            color: #0000ff;
+            text-decoration: none;
+            margin-top: 10px;
+            display: block;
+        }
+
+        body {
+            background-color: #242a38;
+            color: #000000;
+        }
+
+
+
+
+
+        #comment-form {
+            width: 80%;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background: #f0f0f0;
+        }
+
+        #comment-form label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        #comment-form input,
+        #comment-form textarea {
+            width: 100%;
+            border: 1px solid #000000;
+            padding: 5px;
+        }
+
+        #comment-form button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background: #016ba8;
+            color: #000000;
+            border: none;
+            cursor: pointer;
+        }
+
+        .comment {
+            width: 80%;
+            margin: 20px auto;
+            border: 1px solid #000000;
+            padding: 10px;
+            background: #000000;
+        }
+
+        .comment h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #016ba8;
+        }
+
+        .comment p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Аниме новости на 2024 год</h1>
+    <div class="container">
+        <div class="news">
+            <div class="news-item">
+                <img src="./images/Без названия.jpg">
+                <h3>Пустоголовая ведьма 2</h3>
+                <p>В прошлые века жила могучая колдунья Маньяо,
+                    которая носила на себе тяжелый груз своей трагической истории.
+                    Глубокие душевные раны беспокоили её без упокоения.
+                    В попытке избавиться от этого гнета она предприняла радикальные шаги,
+                    кардинально изменившие её судьбу. <a href="AnimeNews.html">БОЛЬШЕ ИНФОРМАЦИИ...</a>
+                </p>
+
+            </div>
+            <div class="news-item">
+                <img src="./images/1704003740_4eca6801a4234fcd4e8d33f32475fc89.jpeg">
+                <h3>Гордый владыка вечности</h3>
+                <p>
+                    Наследник семьи Чу, который был слаб с рождения,
+                    не обладая способностями к культивации.
+                    Однако по воле случая он получает возможность
+                    перестроить духовные меридианы и развивать боевые искусства.
+                    Продолжая внешне прикидываться никчемным,
+                    герой обретает вторую личность и отправляется
+                    на расследование исчезновения...<a href="AnimeNews2.html">БОЛЬШЕ ИНФОРМАЦИИ...</a>
+                </p>
+            </div>
+            <div class="news-item">
+                <img src="./images/main_alt-4cfee921c56b98326de0a07e7ad3bcb5.jpeg">
+                <h3>Магия и мускулы 2 </h3>
+                <p>
+                    Родиться в мире магии
+                    еще не означает автоматически
+                    оказаться в сказке. Здесь
+                    процветают всё те же пороки,
+                    что и в любом цивилизованном обществе,
+                    только иерархия выстраивается не за счет финансов и связей,
+                    а на основании того, насколько ты сильный маг.
+                    К сожалению, Мэш Бёрндэд оказался
+                    не на том конце социального
+                    неравенства: в нём нет ни капли магии.
+                    Он по определению отщепенец и изгой.
+                    Чтобы доказать всему миру, что он...<a href="./AnimeNews3.html">БОЛЬШЕ ИНФОРМАЦИИ...</a>
+                </p>
+            </div>
+
+            <script>
+
+                var form = document.getElementById("comment-form");
+                var container = document.getElementById("comment-container");
+
+
+                form.addEventListener("submit", function (event) {
+
+                    event.preventDefault();
+
+
+                    var name = form.name.value;
+                    var comment = form.comment.value;
+
+                    var newComment = document.createElement("div");
+                    newComment.className = "comment";
+                    newComment.innerHTML = "<h5>" + name + "</h5><p>" + comment + "</p>";
+
+
+                    container.prepend(newComment);
+
+
+                    form.name.value = "";
+                    form.comment.value = "";
+                });
+            </script>
+
+<form id="comment-form" method="post" action="submit.php">
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+    <label for="comment">Комментарий:</label>
+    <textarea id="comment" name="comment" placeholder="Введите ваш комментарий" rows="5" required></textarea>
+    <button type="submit" id="submit">Отправить</button>
+
+</form>
+
+</body>
+
+</html>
